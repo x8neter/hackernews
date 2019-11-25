@@ -9,6 +9,12 @@ export const StoriesContainer = () => {
     getStoryIds().then(stories => setStoryIds(stories));
   }, []); // [] what's in the [] is been watching by useEffect,
 
-  return storyIds.map(storyId => <Story key={storyId} storyId={storyId} />);
+  return (
+    <>
+      <h1>Hacker News Stories</h1>
+      {storyIds.map(storyId => (
+        <Story key={storyId} storyId={storyId} />
+      ))}
+    </>
+  );
 };
-gi;
